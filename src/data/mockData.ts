@@ -1,4 +1,4 @@
-import { User, Field, DashboardStats } from '../types';
+import type { User, Field, DashboardStats } from '../types';
 
 export const mockUser: User = {
   id: '1',
