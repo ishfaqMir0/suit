@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Plus, Search, Filter, MapPin, Calendar } from 'lucide-react';
+import { Plus, Search, ListFilter as Filter, MapPin, Calendar } from 'lucide-react';
 import Card from '../components/UI/Card';
 import Button from '../components/UI/Button';
 import { mockFields } from '../data/mockData';

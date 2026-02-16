@@ -1,12 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { 
-  LayoutDashboard, 
-  MapPin, 
-  UserCircle, 
-  LogOut,
-  X
-} from 'lucide-react';
+import { LayoutDashboard, MapPin, CircleUser as UserCircle, LogOut, X } from 'lucide-react';
 
 interface SidebarProps {
   isOpen: boolean;

@@ -1,12 +1,5 @@
 import React from 'react';
-import { 
-  MapPin, 
-  TreePine, 
-  AlertTriangle, 
-  Cloud,
-  TrendingUp,
-  Calendar
-} from 'lucide-react';
+import { MapPin, TreePine, TriangleAlert as AlertTriangle, Cloud, TrendingUp, Calendar } from 'lucide-react';
 import Card from '../components/UI/Card';
 import { mockDashboardStats } from '../data/mockData';
 
