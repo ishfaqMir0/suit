@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { LayoutDashboard, MapPin, CircleUser as UserCircle, LogOut, X } from 'lucide-react';
 
 interface SidebarProps {
@@ -8,12 +8,18 @@ interface SidebarProps {
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
+  const navigate = useNavigate();
+
   const menuItems = [
     { path: '/dashboard', icon: LayoutDashboard, label: 'Dashboard' },
     { path: '/fields', icon: MapPin, label: 'Fields' },
     { path: '/profile', icon: UserCircle, label: 'Edit Profile' },
   ];
 
+  const handleSignOut = () => {
+    navigate('/login');
+    onClose();
+  };
   return (
     <>
       {/* Mobile overlay */}
@@ -63,7 +69,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </ul>
           
           <div className="mt-8 pt-8 border-t border-gray-200">
-            <button className="flex items-center space-x-3 px-4 py-3 w-full text-left text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200">
+            <button 
+              onClick={handleSignOut}
+              className="flex items-center space-x-3 px-4 py-3 w-full text-left text-gray-700 hover:bg-gray-50 rounded-lg transition-colors duration-200"
+            >
               <LogOut className="w-5 h-5" />
               <span className="font-medium">Sign Out</span>
             </button>

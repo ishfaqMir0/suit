@@ -27,7 +27,7 @@ const Fields: React.FC = () => {
   const getCropStageColor = (stage: string) => {
     switch (stage) {
       case 'Planting':
-        return 'bg-brown-100 text-brown-800';
+        return 'bg-amber-100 text-amber-800';
       case 'Growing':
         return 'bg-green-100 text-green-800';
       case 'Flowering':
